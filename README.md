@@ -33,7 +33,7 @@ Two players draw head-to-head for 30 seconds. 🎉 Confetti pops, the drawings a
 ---
 
 ## 🚀 Quick Start (Local)
-
+```
 bash
 git clone https://github.com/ericlong12/happy-doodle.git
 cd happy-doodle
@@ -48,7 +48,7 @@ cp .env.local.example .env.local
 pnpm dev
 # Open http://localhost:3000 (use the "Network" URL on phones)
 
-
+```
 
 ---
 
