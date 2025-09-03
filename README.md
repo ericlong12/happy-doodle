@@ -52,14 +52,10 @@ pnpm dev
 
 ---
 
-### PART 4 — Supabase Setup (tables, policies, storage)
-
-```markdown
-## 🧰 Supabase Setup
-
-Open **Supabase → SQL Editor** and run the following once:
-
-sql
+PART 4 — Supabase Setup (tables, policies, storage)
+🧰 Supabase Setup
+Open Supabase → SQL Editor and run the following once:
+```
 -- Enable extension (for UUIDs)
 create extension if not exists "pgcrypto";
 
@@ -91,8 +87,14 @@ create policy if not exists "rooms_update" on public.rooms for update using (tru
 create policy if not exists "votes_read"   on public.votes for select using (true);
 create policy if not exists "votes_write"  on public.votes for insert with check (true);
 create policy if not exists "votes_upsert" on public.votes for update using (true) with check (true);
+```
 
+Enable Realtime: in Supabase, go to Tables → votes → toggle “Realtime Enabled.”
+Storage (public bucket for battle posters)
+Supabase → Storage → create bucket battles → set to Public
+Then add these policies in SQL Editor:
 
+```
 create policy if not exists "public uploads to battles"
 on storage.objects
 for insert to anon
@@ -103,15 +105,12 @@ on storage.objects
 for update to anon
 using (bucket_id = 'battles')
 with check (bucket_id = 'battles');
-
-
 ```
----
 
-### PART 5 — Deploy to Vercel
 
-```markdown
-## ☁️ Deploy to Vercel
+PART 5 — Deploy to Vercel
+
+```markdown## ☁️ Deploy to Vercel
 
 1) Push this repo to GitHub  
 2) Import at https://vercel.com/new → Framework: **Next.js**  
