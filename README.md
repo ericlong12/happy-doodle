@@ -127,7 +127,7 @@ The API builds links from the **request origin**, so it automatically uses your 
 ---
 ```
 
-## 🧱 Architecture
+🧱 Architecture
 
 **Next.js (App Router)**  
 - `/` → Create Room + QR codes  
@@ -142,7 +142,7 @@ The API builds links from the **request origin**, so it automatically uses your 
 
 ---
 
-## 🔧 Config
+🔧 Config
 
 Create `.env.local`:
 
@@ -155,56 +155,4 @@ NEXT_PUBLIC_SUPABASE_ANON_KEY="YOUR_ANON_KEY"
 
 
 ---
-
-### PART 7 — Sponsor Hooks & Roadmap
-
-```markdown
-## 🏆 Sponsor Hooks (optional add-ons)
-
-- **Vonage SMS/MMS:** send the battle poster to a phone (`/api/share-sms`)  
-- **Foxit PDF:** generate a “Battle Certificate” PDF (`/api/certificate`)  
-- **Zoom / Webhooks:** auto-create a room for break-time games
-
-_Ping if you want a minimal API route stub for any sponsor._
-
----
-
-## 🗺️ Roadmap
-
-✅ Mobile drawing, timer, prompts, voting, share image  
-⏳ Prompt theme packs (Sci-Fi, Food, San Jose)  
-⏳ Light anti-spam (rate-limit & vote dedupe)  
-⏳ Spectator gallery / replay mode
-
----
-## 🧩 Troubleshooting
-
-- **Links show localhost on Vercel:** open the Vercel URL (the API uses request origin for links)  
-- **“Invalid API key” / 500:** check `NEXT_PUBLIC_SUPABASE_URL` and `NEXT_PUBLIC_SUPABASE_ANON_KEY` in Vercel envs, then redeploy  
-- **No live updates:** enable Realtime on `votes`  
-- **Share image fails:** make `battles` bucket **Public** and apply the two Storage policies above
-
----
-
-## 📸 Screenshots
-
-_Add images under `public/screenshots/` and link them here:_
-
-<!-- ![Home](./public/screenshots/home.png) -->
-<!-- ![Room](./public/screenshots/room.png) -->
-<!-- ![Vote](./public/screenshots/vote.png) -->
-<!-- ![Poster](./public/screenshots/poster.png) -->
-
----
-
-## 📄 License
-
-MIT — go make cool doodles!
-
----
-
-## 🙌 Acknowledgments
-
-Built at DevNetwork **API + Cloud + Data Hackathon 2025**.  
-Thanks to Supabase for realtime & storage, the Next.js team for great DX, and everyone who doodled with us!
 
