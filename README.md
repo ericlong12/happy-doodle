@@ -2,7 +2,7 @@
 
 Two players draw head-to-head for 30 seconds. 🎉 Confetti pops, the drawings are revealed, and the crowd votes (live) to crown a winner. Optional: random silly prompts + a stitched “battle poster” image you can share.
 
-**Live demo:** _add your Vercel URL here_  
+**Live demo:** https://happy-doodle-yay.vercel.app  
 **Tech:** Next.js (App Router) • Supabase (Postgres, Realtime, Storage) • TypeScript • Tailwind
 
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/ericlong12/happy-doodle&env=NEXT_PUBLIC_SUPABASE_URL,NEXT_PUBLIC_SUPABASE_ANON_KEY)
