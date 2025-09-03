@@ -59,7 +59,7 @@ pnpm dev
 
 Open **Supabase → SQL Editor** and run the following once:
 
-```sql
+sql
 -- Enable extension (for UUIDs)
 create extension if not exists "pgcrypto";
 
