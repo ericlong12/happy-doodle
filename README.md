@@ -91,7 +91,7 @@ create policy if not exists "rooms_update" on public.rooms for update using (tru
 create policy if not exists "votes_read"   on public.votes for select using (true);
 create policy if not exists "votes_write"  on public.votes for insert with check (true);
 create policy if not exists "votes_upsert" on public.votes for update using (true) with check (true);
-```
+
 
 create policy if not exists "public uploads to battles"
 on storage.objects
@@ -105,7 +105,7 @@ using (bucket_id = 'battles')
 with check (bucket_id = 'battles');
 
 
-
+```
 ---
 
 ### PART 5 — Deploy to Vercel
